@@ -1,4 +1,9 @@
 <style>
+/* 优化间隔 */
+.thirteen.wide.column {
+    padding-left: 0 !important;
+}
+
 /* 屏幕适配 */
 @media only screen and (min-width: 1200px) {
 	.ui.container {
@@ -11,7 +16,23 @@
 		margin-top: 0.4em !important;
 	}
 }
- 
+
+@media only screen and (min-width: 767px) and (max-width: 991px){
+.ui.four.cards>.card {
+    width: calc(50% - 1.5em);
+    margin-left: .75em;
+    margin-right: .75em;
+}
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1300px){
+.ui.four.cards>.card {
+    width: calc(33% - 1.5em);
+    margin-left: .75em;
+    margin-right: .75em;
+}
+}
+
 /* 整体图标 */
 i.icon {
 	color: #000;
