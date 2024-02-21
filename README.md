@@ -1,6 +1,7 @@
 # 哪吒自定义主题
 
-[演示地址](https://tz.isgo.win)
+优化前：[演示地址](https://tz.isgo.win)
+优化后：[演示地址]([https://tz.isgo.win](http://66.181.33.108:28008/))
 
 ## 使用方法（哪吒版本>=0.16.0）
 ##### 如果哪吒版本<0.16.0，不需要`network.html`文件，并删除`menu.html`文件中第18行，即：`<a class='item{{if eq .MatchedPath "/network"}} active{{end}}' href="/network"><i class="server icon"></i>{{tr "NetworkSpiter"}}</a>`
@@ -39,7 +40,13 @@ vim /opt/nezha/dashboard/data/config.yaml
 ```
 找到`MaxTCPPingValue:` 修改后面的值为`2000`
 
-## 新增及修改内容
+## 优化后新增及修改内容
+1. 内存、硬盘少于10GB时显示两位小数点，当小数部分为零时不显示结尾的零
+2. 将semantic-ui更新到了最新版
+3. 将`.thirteen.wide.column`的`padding-left`修改为了`0`
+4. 修改了尴尬的自适应
+
+## kshipeng大佬新增及修改内容
 0、三网延迟界面图表美化
 
 1、内存、硬盘少于1GB时以MB显示, 多于1GB时精确到小数点后2位
