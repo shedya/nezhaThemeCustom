@@ -1,8 +1,8 @@
 # 哪吒自定义主题
 
-优化前：[演示地址](https://tz.isgo.win)
+优化前：[](https://tz.isgo.win)
 
-优化后：[演示地址](http://66.181.33.108:28008)
+优化后：[](http://66.181.33.108:28008)
 
 ## 使用方法（哪吒版本>=0.16.0）
 ##### 如果哪吒版本<0.16.0，不需要`network.html`文件，并删除`menu.html`文件中第18行，即：`<a class='item{{if eq .MatchedPath "/network"}} active{{end}}' href="/network"><i class="server icon"></i>{{tr "NetworkSpiter"}}</a>`
