@@ -326,10 +326,20 @@
         const sizes = ['B', 'KB', 'MB', 'GB', 'TB', 'PB'];
         let i = parseInt(Math.floor(Math.log(bs) / Math.log(1024)));
 
-        let result = parseFloat((bs / Math.pow(1024, i)).toFixed(2));
-        if (result === 1024) { result = 1; i++; }
-        if (i <= 2) {result = parseFloat((bs / Math.pow(1024, i)).toFixed(0));}
-        return result + '' + sizes[i];
+        let result = bs / Math.pow(1024, i);
+        if (result === 1024) {
+          result = 1;
+          i++;
+        }
+        if (i <= 3) {
+          if (result < 10) {
+            result = result.toFixed(2).replace(/\.?0+$/, '');
+          } else {
+            result = result.toFixed(0);
+          }
+        }
+        
+return result + '' + sizes[i];
       },
       listTipsMouseenter(obj,strs,tipsNum=1){
           this.layerIndex = layer.tips(strs, '#'+obj,{tips: [tipsNum, 'rgb(0 0 0 / 85%)'],time:0});
